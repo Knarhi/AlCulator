@@ -20,10 +20,8 @@ class Calculator {
         this.intoxicationAtZerHour = this.genderIntoxicationFactor / this.userWeightInKg * this.numberOfPortions;
     }
 
-    this.calculateCurrentIntoxication(){
-
+    this.calculateCurrentIntoxication() {
         var currentIntoxication = this.intoxicationAtZerHour - (this.burnRatePerHour * this.hoursFromStarting);
-
         if (currentIntoxication > 0) {
             return Math.round(currentIntoxication * 100) / 100;
         } else {
