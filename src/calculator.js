@@ -38,9 +38,10 @@ class Calculator {
         }
     }
 
-    this.giveResultArray() {
+    this.giveResultParagraph() {
         var currentIntoxication = calculateCurrentIntoxication();
         var timeUntilSober = calculateCurrentIntoxication(currentIntoxication);
+        var paragraph = "<p id=result>", currentIntoxication, "promillen känni päällä, ", timeUntilSober," tuntia selviämiseen.</p>"
         return([currentIntoxication,timeuntilSober]);
     }
 }
