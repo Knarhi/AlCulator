@@ -1,0 +1,6 @@
+export const MAN = 0
+export const WOMAN = 1
+export const  MALE_BURN_FACTOR_PER_KG_PER_HOUR = 0.013
+export const  FEMALE_BURN_FACTOR_PER_KG_PER_HOUR = 0.015
+export const  MALE_INTOXICATION_PER_PORTION_PER_KG = 16
+export const  FEMALE_INTOXICATION_PER_PORTION_PER_KG = 18.18
