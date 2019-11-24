@@ -17,20 +17,20 @@ export default class CalculatorFront extends React.Component {
 
     AreInputStatesSet() {
         try{
-        if (this.state.gender === null) {
-            return false;
-        } else if (this.state.weightInKg === null) {
-            return false;
-        } else if (this.state.timeFromStarting === null) {
-            return false;
-        } else if (this.state.portions === null) {
-            return false;
-        } else {
-            return true;
+            if (this.state.gender === null) {
+                return false;
+            } else if (this.state.weightInKg === null) {
+                return false;
+            } else if (this.state.timeFromStarting === null) {
+                return false;
+            } else if (this.state.portions === null) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch(error) {
+            throw "user inputs not in place: " + error
         }
-    } catch(error) {
-
-    }
     }
 
     GetGenderBurnFactor(gender) {
