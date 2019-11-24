@@ -6,9 +6,13 @@ joten päädyin jättämään tänne tämän OOP-näytteenä ja reactin puolella
 export default class Calculator {
     Constructor(gender, weightInKg, timeFromStartingInHours, portions) {
         try {
-            this.userWeightInKg = parseInt(weightInKg);
-            this.timeFromStarting = parseInt(timeFromStartingInHours);
-            this.numberOfPortions = parseInt(portions);
+            if (Math.sign(weightInKg) < 0 || Math.sign(timeFromStartingInHours) <= 0 || Math.sign(portions) <= 0) {
+                throw "invalid input";
+            else {
+                this.userWeightInKg = parseInt(weightInKg);
+                this.timeFromStarting = parseInt(timeFromStartingInHours);
+                this.numberOfPortions = parseInt(portions);
+            }
             if (gender === Constants.MAN) {
                 var genderBurnFactor =  Constants.MALE_BURN_FACTOR_PER_KG_PER_HOUR
                 var genderIntoxicationFactor =  Constants.MALE_INTOXICATION_PER_PORTION_PER_KG

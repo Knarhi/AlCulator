@@ -1,3 +1,4 @@
+
 import React from 'react';
 import * as Constants from "./constants";
 
@@ -19,11 +20,11 @@ export default class CalculatorFront extends React.Component {
         try{
             if (this.state.gender === null) {
                 return false;
-            } else if (this.state.weightInKg === null) {
+            } else if (this.state.weightInKg === null || this.state.weightInKg <= 0) {
                 return false;
-            } else if (this.state.timeFromStarting === null) {
+            } else if (this.state.timeFromStarting === null || this.state.timeFromStarting < 0) {
                 return false;
-            } else if (this.state.portions === null) {
+            } else if (this.state.portions === null || this.state.portions < 0) {
                 return false;
             } else {
                 return true;
